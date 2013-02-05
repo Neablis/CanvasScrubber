@@ -17,7 +17,11 @@ var ProgressBar = function () {
 	this.endY = 0;
 	this.asName = 'progressBar';
 
-
+    /**
+     * return Value of bar
+	 * @param {Object} Parent element to use for sizing and creation of progress bar
+	 * @param {String} a unique name to give to your progress bar, used to have mulitple elements
+     */
     ProgressBar.prototype.init = function (div, asName) {
         this.div = div;
 		if( asName !== undefined ){
@@ -64,6 +68,10 @@ var ProgressBar = function () {
 
     };
 	
+	/**
+     * return the name given during init
+     * @returns {String} a string name of the progressbar
+     */
 	ProgressBar.prototype.returnName = function () {
 		return this.asName;
     };
@@ -108,6 +116,9 @@ var ProgressBar = function () {
         window.ontouchend = null;
     };
 	
+	/**
+     * resizes the progress bar if its parent element happens to change
+     */
 	ProgressBar.prototype.resize = function () {
 		
 		var tempValue = this.getValue();
@@ -159,6 +170,10 @@ var ProgressBar = function () {
         return ((this.i * 100) / this.total_width);
     };
 	
+	 /**
+     * return Value of bar
+     * @returns {Object} Returns a object containing a progressbars locations in the dom
+     */
 	ProgressBar.prototype.returnDomLocation = function () {
         return this.FindDOMObjectLocation(this.elem);
     };
