@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Progress Bar</title>
+		<script type="text/javascript" src="CanvasProgressBar.js"></script>
+
+		<script>
+			window.onload = function() {
+				var elem1 = document.getElementById('progressBarDiv');
+				this.progressBar1 = new ProgressBar();
+				this.progressBar1.init(elem1, 'first');
+				
+				var elem2 = document.getElementById('progressBarDiv2');
+				this.progressBar2 = new ProgressBar();
+				this.progressBar2.init(elem2, 'second');
+				
+				var elem3 = document.getElementById('progressBarDiv3');
+				this.progressBar3 = new ProgressBar();
+				this.progressBar3.init(elem3, 'third');
+				
+				var elem4 = document.getElementById('progressBarDiv4');
+				this.progressBar4 = new ProgressBar();
+				this.progressBar4.init(elem4, 'fourth');
+				
+				var elem5 = document.getElementById('progressBarDiv5');
+				this.progressBar5 = new ProgressBar();
+				this.progressBar5.init(elem5, 'fifth');
+	
+			}
+		</script>
+		<style>
+			#progressBarDiv{ width:50%; height:10px; position: absolute; top:50px; left:25%; }
+			
+			#progressBarDiv2{ width:25%; height:16px; position: absolute; top:100px; left:15%; }
+			
+			#progressBarDiv3{ width:50%; height:40px; position: absolute; top:150px; left:10%; }
+
+			#progressBarDiv4{ width:75%; height:80px; position: absolute; top:200px; left:10%; }
+
+			#progressBarDiv5{ width:100%; height:100px; position: absolute; top:300px; left:0; }
+
+			
+			.disablePanZoom 
+			{
+				-ms-touch-action: none; /* Shunt all pointer events to JavaScript code. */
+			}
+		</style>
+	</head>
+	<body style="background-color:black">
+		<div id="progressBarDiv">
+		</div>
+		
+		<div id="progressBarDiv2">
+		</div>
+		
+		<div id="progressBarDiv3">
+		</div>
+		
+		<div id="progressBarDiv4">
+		</div>
+		
+		<div id="progressBarDiv5">
+		</div>
+	</body>
+
+
+</html>
